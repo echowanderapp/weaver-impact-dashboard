@@ -45,7 +45,7 @@ def rank_engineers(prs: list[dict], classifications: dict) -> list[dict]:
         complexity = .35 * record["logic"] + .30 * record["architecture"] + .20 * record["cross_component"] + .15 * record["change_scope"]
         pr_value = record["pr_value"] * record["confidence"]
         week = datetime.fromisoformat(pr["mergedAt"].replace("Z", "+00:00")).strftime("%G-W%V")
-        people[login].update({"login":login,"name":None,"avatar_url":author["avatarUrl"],"profile_url":author["url"]})
+        people[login].update({"login":login,"name":author.get("name"),"avatar_url":author["avatarUrl"],"profile_url":author["url"]})
         people[login]["prs"].append({"title":pr["title"],"url":pr["url"],"kind":"pull_request","explanation":f"{component}: {record['explanation']}","impact_score":round(impact*10,1),"impact":impact,"complexity":complexity,"value":pr_value,"component":component})
         people[login]["confidence"].append(record["confidence"])
         area = people[login]["components"][component]

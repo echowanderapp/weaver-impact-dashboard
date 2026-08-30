@@ -11,6 +11,17 @@ python3 -m pip install -r scripts/requirements.txt -r backend/requirements.txt
 GITHUB_TOKEN=... OPENAI_API_KEY=... OPENAI_MODEL=gpt-5.5 python3 scripts/ingest.py --repo PostHog/posthog --since 2026-06-01
 ```
 
+For a complete local-history scan without GitHub pagination or search limits:
+
+```bash
+python3 scripts/ingest.py --repo PostHog/posthog --local-repo posthog --since 2026-06-01 --fetch-only
+OPENAI_API_KEY=... OPENAI_MODEL=gpt-5.5 python3 scripts/ingest.py --from-cache backend/data/raw.json --max-gpt-records 500 --output backend/data/dashboard.json
+```
+
+The checkout must be non-shallow and current. Local Git is authoritative for commits, file paths, diffs, authors, and active weeks; PR numbers are extracted from squash-commit subjects when available. GitHub reviews, labels, and linked issues are unavailable in local-only mode.
+
+The GPT pass is hard-capped at 500 contributions by default. Every contribution first receives a deterministic conventional-commit/path baseline. Generated and documentation-only changes remain deterministic. GPT capacity is allocated across contributors before remaining slots are filled by likely significance, so repository volume cannot silently increase LLM cost.
+
 ## Run locally
 
 ```bash

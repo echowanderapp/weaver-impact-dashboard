@@ -2,21 +2,253 @@
   "repository": "PostHog/posthog",
   "window_start": "2026-06-01",
   "window_end": "2026-08-30",
-  "generated_at": "2026-08-30T08:00:00Z",
+  "generated_at": "2026-08-30T08:50:28.896691Z",
   "model": "gpt-5.5",
   "methodology": {
-    "weights": { "impact": 40, "complexity": 25, "output": 20, "ownership": 15 },
-    "summary": "GPT-5.5 assists with Impact and Complexity; deterministic code calculates Meaningful Output, Ownership, and the final ranking.",
+    "weights": {
+      "impact": 40.0,
+      "complexity": 25.0,
+      "output": 20.0,
+      "ownership": 15.0
+    },
+    "summary": "GPT-5.5 enriches a contributor-balanced maximum of 500 contributions; deterministic baselines cover the complete window and code calculates Output, Ownership, and the final ranking.",
     "limitations": [
-      "This preview snapshot must be regenerated with GitHub and OpenAI credentials before submission.",
-      "Public GitHub evidence cannot capture private planning, mentoring, incident response, or other invisible work."
+      "Public Git evidence cannot capture private planning, mentoring, incident response, reviews, or other invisible work.",
+      "Scores compare visible contributions within this repository and time window only.",
+      "Unknown file paths receive a conservative component importance of 4/10.",
+      "GPT enrichment is capped at 500 contributions; remaining records use auditable title/path heuristics."
     ]
   },
   "engineers": [
-    {"rank":1,"login":"preview-one","name":"Preview Engineer 1","avatar_url":"https://github.com/preview-one.png","profile_url":"https://github.com/PostHog/posthog","score":92,"strongest_dimension":"impact","dimensions":{"impact":9.6,"complexity":9.1,"output":8.4,"ownership":9.3},"confidence":0.2,"summary":"6 meaningful changes in feature_flags; active 10/13 weeks with 18% of visible component output.","authored_prs":6,"substantive_reviews":2,"primary_component":"feature_flags","active_weeks":10,"component_share":18,"meaningful_output":24.5,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"pull_request","explanation":"Placeholder evidence used only for local UI verification.","impact_score":92}]},
-    {"rank":2,"login":"preview-two","name":"Preview Engineer 2","avatar_url":"https://github.com/preview-two.png","profile_url":"https://github.com/PostHog/posthog","score":87,"strongest_dimension":"complexity","dimensions":{"impact":8.2,"complexity":9.4,"output":8.3,"ownership":8.6},"confidence":0.2,"summary":"5 meaningful changes in ingestion; active 8/13 weeks with 14% of visible component output.","authored_prs":5,"substantive_reviews":3,"primary_component":"ingestion","active_weeks":8,"component_share":14,"meaningful_output":21,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"pull_request","explanation":"Placeholder evidence used only for local UI verification.","impact_score":87}]},
-    {"rank":3,"login":"preview-three","name":"Preview Engineer 3","avatar_url":"https://github.com/preview-three.png","profile_url":"https://github.com/PostHog/posthog","score":81,"strongest_dimension":"output","dimensions":{"impact":7.8,"complexity":7.9,"output":9.2,"ownership":7.6},"confidence":0.2,"summary":"8 meaningful changes in session_replay; active 7/13 weeks with 12% of visible component output.","authored_prs":8,"substantive_reviews":1,"primary_component":"session_replay","active_weeks":7,"component_share":12,"meaningful_output":26,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"review","explanation":"Placeholder evidence used only for local UI verification.","impact_score":81}]},
-    {"rank":4,"login":"preview-four","name":"Preview Engineer 4","avatar_url":"https://github.com/preview-four.png","profile_url":"https://github.com/PostHog/posthog","score":76,"strongest_dimension":"ownership","dimensions":{"impact":7.3,"complexity":7,"output":7.7,"ownership":9},"confidence":0.2,"summary":"4 meaningful changes in core_api; active 9/13 weeks with 16% of visible component output.","authored_prs":4,"substantive_reviews":4,"primary_component":"core_api","active_weeks":9,"component_share":16,"meaningful_output":18,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"pull_request","explanation":"Placeholder evidence used only for local UI verification.","impact_score":76}]},
-    {"rank":5,"login":"preview-five","name":"Preview Engineer 5","avatar_url":"https://github.com/preview-five.png","profile_url":"https://github.com/PostHog/posthog","score":71,"strongest_dimension":"impact","dimensions":{"impact":8,"complexity":6.6,"output":6.7,"ownership":6.9},"confidence":0.2,"summary":"3 meaningful changes in product_shared; active 5/13 weeks with 8% of visible component output.","authored_prs":3,"substantive_reviews":1,"primary_component":"product_shared","active_weeks":5,"component_share":8,"meaningful_output":13.5,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"pull_request","explanation":"Placeholder evidence used only for local UI verification.","impact_score":71}]}
+    {
+      "rank": 1,
+      "login": "phil-haack-28a5b0",
+      "name": "Phil Haack",
+      "avatar_url": "https://github.com/phil-haack-28a5b0.png",
+      "profile_url": "https://github.com/search?q=haacked%40gmail.com&type=users",
+      "score": 60.5,
+      "strongest_dimension": "output",
+      "dimensions": {
+        "impact": 6.1,
+        "complexity": 3.2,
+        "output": 9.0,
+        "ownership": 6.7
+      },
+      "confidence": 0.46,
+      "summary": "73 meaningful changes in feature_flags; active 13/13 weeks with 21% of the component's visible output.",
+      "authored_prs": 141,
+      "substantive_reviews": 0,
+      "primary_component": "feature_flags",
+      "active_weeks": 13,
+      "component_share": 21.1,
+      "meaningful_output": 158.1,
+      "evidence": [
+        {
+          "title": "feat(flags): add flag_evaluations ClickHouse table (#72990)",
+          "url": "https://github.com/PostHog/posthog/pull/72990",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 75.9
+        },
+        {
+          "title": "feat(flags): produce flags-cache invalidations to Kafka (dual-write) (#62817)",
+          "url": "https://github.com/PostHog/posthog/pull/62817",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 75.9
+        },
+        {
+          "title": "feat(cohorts): add staff tools for stuck cohort recalculation (#72468)",
+          "url": "https://github.com/PostHog/posthog/pull/72468",
+          "kind": "pull_request",
+          "explanation": "feature_flags: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 74.5
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "login": "jos-sequeira-de25c2",
+      "name": "José Sequeira",
+      "avatar_url": "https://github.com/jos-sequeira-de25c2.png",
+      "profile_url": "https://github.com/search?q=jose%40posthog.com&type=users",
+      "score": 59.6,
+      "strongest_dimension": "output",
+      "dimensions": {
+        "impact": 5.9,
+        "complexity": 3.1,
+        "output": 8.8,
+        "ownership": 7.1
+      },
+      "confidence": 0.45,
+      "summary": "81 meaningful changes in ingestion; active 13/13 weeks with 9% of the component's visible output.",
+      "authored_prs": 136,
+      "substantive_reviews": 0,
+      "primary_component": "ingestion",
+      "active_weeks": 13,
+      "component_share": 9.3,
+      "meaningful_output": 146.3,
+      "evidence": [
+        {
+          "title": "feat(ingestion-consumer): send sub-batches over ordered gRPC lanes (#85238)",
+          "url": "https://github.com/PostHog/posthog/pull/85238",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 77.7
+        },
+        {
+          "title": "feat(ingestion-consumer): add worker streaming ingest proto (#85171)",
+          "url": "https://github.com/PostHog/posthog/pull/85171",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 77.7
+        },
+        {
+          "title": "feat(ingestion-warnings): expose v2 warnings as an mcp tool (#69211)",
+          "url": "https://github.com/PostHog/posthog/pull/69211",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 75.9
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "login": "arthur-moreira-de-deus-d43798",
+      "name": "Arthur Moreira de Deus",
+      "avatar_url": "https://github.com/arthur-moreira-de-deus-d43798.png",
+      "profile_url": "https://github.com/search?q=arthur%40posthog.com&type=users",
+      "score": 59.3,
+      "strongest_dimension": "output",
+      "dimensions": {
+        "impact": 5.8,
+        "complexity": 3.6,
+        "output": 9.5,
+        "ownership": 5.4
+      },
+      "confidence": 0.46,
+      "summary": "66 meaningful changes in session_replay; active 12/13 weeks with 3% of the component's visible output.",
+      "authored_prs": 192,
+      "substantive_reviews": 0,
+      "primary_component": "session_replay",
+      "active_weeks": 12,
+      "component_share": 3.1,
+      "meaningful_output": 252.9,
+      "evidence": [
+        {
+          "title": "feat(customer-analytics): sync Gmail account email (#84534)",
+          "url": "https://github.com/PostHog/posthog/pull/84534",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 75.9
+        },
+        {
+          "title": "feat(conversations): capture outbound customer email (#82702)",
+          "url": "https://github.com/PostHog/posthog/pull/82702",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 74.1
+        },
+        {
+          "title": "feat(customer-analytics): verify email forwarding (#83174)",
+          "url": "https://github.com/PostHog/posthog/pull/83174",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 74.1
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "login": "andrew-maguire-1d9df2",
+      "name": "Andrew Maguire",
+      "avatar_url": "https://github.com/andrew-maguire-1d9df2.png",
+      "profile_url": "https://github.com/search?q=andrewm4894%40gmail.com&type=users",
+      "score": 59.1,
+      "strongest_dimension": "output",
+      "dimensions": {
+        "impact": 5.5,
+        "complexity": 3.1,
+        "output": 9.8,
+        "ownership": 6.5
+      },
+      "confidence": 0.53,
+      "summary": "53 meaningful changes in ingestion; active 13/13 weeks with 4% of the component's visible output.",
+      "authored_prs": 382,
+      "substantive_reviews": 0,
+      "primary_component": "ingestion",
+      "active_weeks": 13,
+      "component_share": 3.9,
+      "meaningful_output": 401.2,
+      "evidence": [
+        {
+          "title": "feat(signals): render report charts as images in Slack delivery (#84071)",
+          "url": "https://github.com/PostHog/posthog/pull/84071",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 75.9
+        },
+        {
+          "title": "feat(signals): gate scout auto-pause on report engagement, not emission (#76046)",
+          "url": "https://github.com/PostHog/posthog/pull/76046",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 75.9
+        },
+        {
+          "title": "feat(signals): create scout configs without waiting for the coordinator tick (#62860)",
+          "url": "https://github.com/PostHog/posthog/pull/62860",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 75.9
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "login": "rafael-audibert-267472",
+      "name": "Rafael Audibert",
+      "avatar_url": "https://github.com/rafael-audibert-267472.png",
+      "profile_url": "https://github.com/search?q=32079912%2Brafaeelaudibert%40users.noreply.github.com&type=users",
+      "score": 58.9,
+      "strongest_dimension": "output",
+      "dimensions": {
+        "impact": 5.8,
+        "complexity": 3.5,
+        "output": 8.9,
+        "ownership": 6.1
+      },
+      "confidence": 0.45,
+      "summary": "45 meaningful changes in ingestion; active 11/13 weeks with 4% of the component's visible output.",
+      "authored_prs": 158,
+      "substantive_reviews": 0,
+      "primary_component": "ingestion",
+      "active_weeks": 11,
+      "component_share": 4.4,
+      "meaningful_output": 153.1,
+      "evidence": [
+        {
+          "title": "feat(agentic-provisioning): add github_integration and wizard_runs resource actions (#69858)",
+          "url": "https://github.com/PostHog/posthog/pull/69858",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 77.7
+        },
+        {
+          "title": "feat(oauth): widen OAuthApplication.client_id to hold CIMD URLs (#86099)",
+          "url": "https://github.com/PostHog/posthog/pull/86099",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 75.9
+        },
+        {
+          "title": "feat(provisioning): derive partner tiers and cut rate limits over to token buckets (#83935)",
+          "url": "https://github.com/PostHog/posthog/pull/83935",
+          "kind": "pull_request",
+          "explanation": "ingestion: Deterministic feature baseline from commit convention and changed paths.",
+          "impact_score": 75.9
+        }
+      ]
+    }
   ]
 }
