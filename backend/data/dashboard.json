@@ -1,0 +1,22 @@
+{
+  "repository": "PostHog/posthog",
+  "window_start": "2026-06-01",
+  "window_end": "2026-08-30",
+  "generated_at": "2026-08-30T08:00:00Z",
+  "model": "gpt-5.5",
+  "methodology": {
+    "weights": { "impact": 40, "complexity": 25, "output": 20, "ownership": 15 },
+    "summary": "GPT-5.5 assists with Impact and Complexity; deterministic code calculates Meaningful Output, Ownership, and the final ranking.",
+    "limitations": [
+      "This preview snapshot must be regenerated with GitHub and OpenAI credentials before submission.",
+      "Public GitHub evidence cannot capture private planning, mentoring, incident response, or other invisible work."
+    ]
+  },
+  "engineers": [
+    {"rank":1,"login":"preview-one","name":"Preview Engineer 1","avatar_url":"https://github.com/preview-one.png","profile_url":"https://github.com/PostHog/posthog","score":92,"strongest_dimension":"impact","dimensions":{"impact":9.6,"complexity":9.1,"output":8.4,"ownership":9.3},"confidence":0.2,"summary":"6 meaningful changes in feature_flags; active 10/13 weeks with 18% of visible component output.","authored_prs":6,"substantive_reviews":2,"primary_component":"feature_flags","active_weeks":10,"component_share":18,"meaningful_output":24.5,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"pull_request","explanation":"Placeholder evidence used only for local UI verification.","impact_score":92}]},
+    {"rank":2,"login":"preview-two","name":"Preview Engineer 2","avatar_url":"https://github.com/preview-two.png","profile_url":"https://github.com/PostHog/posthog","score":87,"strongest_dimension":"complexity","dimensions":{"impact":8.2,"complexity":9.4,"output":8.3,"ownership":8.6},"confidence":0.2,"summary":"5 meaningful changes in ingestion; active 8/13 weeks with 14% of visible component output.","authored_prs":5,"substantive_reviews":3,"primary_component":"ingestion","active_weeks":8,"component_share":14,"meaningful_output":21,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"pull_request","explanation":"Placeholder evidence used only for local UI verification.","impact_score":87}]},
+    {"rank":3,"login":"preview-three","name":"Preview Engineer 3","avatar_url":"https://github.com/preview-three.png","profile_url":"https://github.com/PostHog/posthog","score":81,"strongest_dimension":"output","dimensions":{"impact":7.8,"complexity":7.9,"output":9.2,"ownership":7.6},"confidence":0.2,"summary":"8 meaningful changes in session_replay; active 7/13 weeks with 12% of visible component output.","authored_prs":8,"substantive_reviews":1,"primary_component":"session_replay","active_weeks":7,"component_share":12,"meaningful_output":26,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"review","explanation":"Placeholder evidence used only for local UI verification.","impact_score":81}]},
+    {"rank":4,"login":"preview-four","name":"Preview Engineer 4","avatar_url":"https://github.com/preview-four.png","profile_url":"https://github.com/PostHog/posthog","score":76,"strongest_dimension":"ownership","dimensions":{"impact":7.3,"complexity":7,"output":7.7,"ownership":9},"confidence":0.2,"summary":"4 meaningful changes in core_api; active 9/13 weeks with 16% of visible component output.","authored_prs":4,"substantive_reviews":4,"primary_component":"core_api","active_weeks":9,"component_share":16,"meaningful_output":18,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"pull_request","explanation":"Placeholder evidence used only for local UI verification.","impact_score":76}]},
+    {"rank":5,"login":"preview-five","name":"Preview Engineer 5","avatar_url":"https://github.com/preview-five.png","profile_url":"https://github.com/PostHog/posthog","score":71,"strongest_dimension":"impact","dimensions":{"impact":8,"complexity":6.6,"output":6.7,"ownership":6.9},"confidence":0.2,"summary":"3 meaningful changes in product_shared; active 5/13 weeks with 8% of visible component output.","authored_prs":3,"substantive_reviews":1,"primary_component":"product_shared","active_weeks":5,"component_share":8,"meaningful_output":13.5,"evidence":[{"title":"Generate the production snapshot","url":"https://github.com/PostHog/posthog/pulls","kind":"pull_request","explanation":"Placeholder evidence used only for local UI verification.","impact_score":71}]}
+  ]
+}
